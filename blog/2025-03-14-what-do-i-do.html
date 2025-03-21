@@ -56,13 +56,13 @@ ones.</p>
 devised a kind of mathematical object which describes a collection of
 symmetries, which is called a <a href="https://en.wikipedia.org/wiki/Group_(mathematics)">group</a>. The
 study of these so-called groups is known as <a href="https://en.wikipedia.org/wiki/Group_theory">group theory</a>.
-Don't let this generic name fool you – these are complex and subtle
+Don't let this unassuming name fool you – these are complex and subtle
 objects which form a vast field of study.</p>
 <p>A fundamental question mathematicians would like to answer is this:
-<em>what are all the ways in which something can be symmetrical?</em>
-Since we need to formulate this mathematically in order to work with it
-precisely, we instead try to answer this (nearly identical) question:
-<em>what are all the possible groups?</em></p>
+what are all the possible kinds of symmetry something can have? This is
+a bit vague, and since we need to formulate this mathematically in order
+to work with it precisely, we instead try to answer this (arguably
+identical) question: <em>what are all the possible groups?</em></p>
 <p>Unfortunately, this question seems to be completely impossible to
 answer in any satisfying way – groups are just too complicated. Perhaps
 this is a surprising fact, since symmetry seems to be so nice.</p>
@@ -81,16 +81,31 @@ achievement of humankind so far.</p>
 <p>One of the major ideas used in this enormous project was <a href="https://en.wikipedia.org/wiki/Representation_theory">representation
 theory</a>. This is a set of tools that we can use to study finite
 groups by interpreting a group as a collection of symmetries of space –
-often in dimensions much higher than three – called a representation. An
-example of the power of representation theory is that mathematicians had
-found a way to understand the representations of a group called the
-monster group before we even knew that it existed!</p>
+often in dimensions much higher than three – called a representation.
+For reasons that still feel mysterious and magical to me, this concept
+has turned out to be extremely useful in studying groups, and some of
+the most fundamental observations that led to the classification of
+finite simple groups are based on representation-theoretic results. A
+famous example of the power of representation theory is that
+mathematicians had found a way to understand the representations of a
+group affectionately called 'the monster' before we even knew that it
+existed at all!</p>
+<p>In the same way that we try to reduce the problem of classifying all
+groups to classifying only the simple groups, we can reduce the problem
+of finding all representations of a given group to finding the
+<em>irreducible</em> representations – the building blocks of all other
+representations. This time, the ways irreducible representations combine
+are much less strange than the ways groups combine, and we can often get
+a complete classification of representations of a group from a list of
+irreducible ones. Finally, a classification that is actually reasonable!
+This is one of the ways in which asking questions about representations
+leads to convenient results.</p>
 <p>My research is about representation theory. I study special groups
 that were very important in the classification of finite simple groups –
 the groups of Lie type – because if we can answer certain questions
 about them, then we can answer questions about the representation theory
 of <em>all</em> finite groups. The hope is that this helps us understand
-how symmetry works in a deeper way.</p>
+how symmetry works in a deeper way someday.</p>
 <h2>For the Undergraduate</h2>
 <p>Let's say we have a group <span class="math inline">\(G\)</span>. A
 representation of <span class="math inline">\(G\)</span> is a function
@@ -109,23 +124,35 @@ representation decomposes as a sum of irreducible representations, or
 irreps for short.</p>
 <p>Classifying the irreducible representations of a given group is a
 common goal when studying representation theory, as one can use a
-complete list of irreducible representations to find out a lot of
-information about your group just by looking at the numbers involved.
-One class of groups whose representation theory we know a lot about is
-<a href="https://en.wikipedia.org/wiki/Representation_theory_of_the_symmetric_group">the
-symmetric groups</a>.</p>
-<p>Notice that in the definition I gave, I required the matrices to be
-over the complex numbers. This was a white lie (forgive me!) as we can
-actually define representations over any field we choose. However a lot
-of the fundamental results of representation theory depend on two
-assumptions:</p>
+complete list of them to find out a lot of information about your group
+just by looking at the numbers involved. One class of groups whose
+representation theory we know a lot about is <a href="https://en.wikipedia.org/wiki/Representation_theory_of_the_symmetric_group">the
+symmetric groups</a>, and there are still a lot of interesting questions
+to be resolved about its representations.</p>
+<p>Here's a really cool fact. If you have a representation <span class="math inline">\(\rho\)</span> and you take the trace of the
+matrices, you get what we call a <em>character</em> <span class="math inline">\(\chi\)</span> of <span class="math inline">\(G\)</span>, which is in particular just a function
+from <span class="math inline">\(G\)</span> into the complex numbers.
+Despite ignoring a huge amount of information about the representation,
+the character determines a representation completely – up to some
+appropriate notion of representations being 'the same' of course. This
+means that we can study characters instead of representations a lot of
+the time, and this turns out to be very fruitful.</p>
+<p>Notice that in the definition I gave, I required the matrices in a
+representation to be over the complex numbers. This was a white lie
+(forgive me!) as we can actually define representations over any field
+we choose. Note that when I say 'field,' I mean a commutative ring with
+multiplicative inverses rather than a vector field or similar
+object.</p>
+<p>A lot of the fundamental results of representation theory depend on
+two assumptions about our field:</p>
 <ol>
-<li>The field we work over is of characteristic zero. That is, <span class="math inline">\(1 + \cdots + 1\)</span> is never equal to <span class="math inline">\(0\)</span> in our field. An example of a field
-like this is the field of integers modulo a given prime <span class="math inline">\(p\)</span>.</li>
+<li>The field we work over is of characteristic zero. That is, <span class="math inline">\(1 + \cdots + 1\)</span> is never equal to <span class="math inline">\(0\)</span> in our field. If you're surprised that
+this is possible at all, an example of a field that is <em>not</em> like
+this is the field of integers modulo a given prime <span class="math inline">\(p\)</span>.</li>
 <li>The field we work over is algebraically closed. That is, every
 non-constant polynomial has a root in the field. It is difficult to
-describe examples of such fields besides the field of complex
-numbers.</li>
+describe examples of such fields besides the field of complex numbers,
+but rest assured they do exist.</li>
 </ol>
 <p>Some researchers drop the first assumptions, and do <a href="https://en.wikipedia.org/wiki/Modular_representation_theory">modular
 representation theory</a>. One of the problems that arise in this case
@@ -147,9 +174,9 @@ Conjecture</a>, which is a McKay-style conjecture in the representation
 theory of finite groups. Alexandre Turull proposed this in 2008
 following a wealth of work in calculating certain character-theoretic
 invariants in a large number of groups.</p>
-<p>The McKay conjecture is a fundamental question in the representation
-theory of finite groups, positing a bijection between characters of a
-group of degree coprime to a prime <span class="math inline">\(p\)</span> and similar characters of the
+<p>The McKay conjecture (rhymes with 'McFly') is a fundamental question
+in the representation theory of finite groups, positing a bijection
+between characters of a group of degree coprime to a prime <span class="math inline">\(p\)</span> and similar characters of the
 normaliser of a Sylow <span class="math inline">\(p\)</span>-subgroup.
 We usually write this as there being a bijection between the sets <span class="math inline">\(\operatorname{Irr}_{p'}(G)\)</span> and <span class="math inline">\(\operatorname{Irr}_{p'}(N_G(P))\)</span>, for
 a given finite group <span class="math inline">\(G\)</span> and Sylow
@@ -168,8 +195,9 @@ refinement</a> stating that the McKay bijection should preserve the
 field of values generated by the character, over the local field <span class="math inline">\(\mathbb Q_p\)</span>. Some call this the
 Galois–McKay conjecture, but more often it is given Navarro's name. A
 reduction theorem for this conjecture <a href="https://arxiv.org/abs/1906.11719">has been proven</a>.</p>
-<p>Turull's conjecture adds an extra layer to what Navarro suggested the
-bijection should preserve, namely the Schur index over the <span class="math inline">\(p\)</span>-adics is preserved.</p>
+<p>Turull's conjecture adds an extra requirement to what Navarro
+suggested the bijection should preserve, namely the Schur index over the
+<span class="math inline">\(p\)</span>-adics.</p>
 <p>So, what is the Schur index? It is a perhaps unsurprising but
 somewhat subtle fact that even if a character takes values in a certain
 field (for example the real numbers) this does not mean that there is a
@@ -190,7 +218,7 @@ hesitate to get in touch.</p>
         </main>
 
         <footer>
-            Site last updated 14 March 2024
+            Site last updated 21 March 2024
         </footer>
     </body>
 </html>
